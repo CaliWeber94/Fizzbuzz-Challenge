@@ -1,46 +1,34 @@
 
-int number = 15;
-string result = DivisbleByThree(number);
-public static string DivisbleByThree(int number)
-{
-  if(number % 3 == O)
-  {
-    result = "fizz";
-  }
-  else 
-  {
-    result = ($"{number} isn't divisble by 3");
-  }
-}
+int number = 10;
+string result = GetFizzBuzz(number);
 Console.WriteLine(result);
 
 
-string result2 = DivisbleByFive(number);
-public static string DivisbleByFive(int number);
+string GetFizzBuzz(int number)
 {
-    if(number % 5 == 0)
+    if (number % 3 == 0)
     {
-        result2 = "buzz";
+        result = "fizz";
+        return result;
     }
+    else if (number % 5 == 0)
+    {
+        result = "buzz";
+        return result;
+    }
+
+    else if (number % 3 == 0 && number % 5 == 0)
+    {
+        result = "fizzbuzz";
+        return result;
+    }
+
     else
     {
-        result2 = ($"{number} isn't divisble by 3");
+        result = ($"{number} isn't divisble by three or five");
+        return result;
     }
+
+
+
 }
-Console.WriteLine(result2);
-
-string result3 = DivisbleByBoth(number);
-public static string DivisbleByBoth(int number)
-{
-  if(number % 3 == 0 && number % 5 == 0)
-  {
-    result3 = "fizzbuzz";
-  }
-  else
-  {
-    result3 = ($"{number} isn't divisible by 3 and 5");
-  }
-}
-
-Console.WriteLine(result3);
-
