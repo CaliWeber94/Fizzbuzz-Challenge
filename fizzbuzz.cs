@@ -6,9 +6,11 @@ Console.WriteLine(result);
 
 string GetFizzBuzz(int number)
 {
-    if (number % 3 == 0)
+    string result;
+
+    if (number % 3 == 0 && number % 5 == 0)
     {
-        result = "fizz";
+        result = "fizzbuzz";
         return result;
     }
     else if (number % 5 == 0)
@@ -17,9 +19,9 @@ string GetFizzBuzz(int number)
         return result;
     }
 
-    else if (number % 3 == 0 && number % 5 == 0)
+    else if (number % 3 == 0)
     {
-        result = "fizzbuzz";
+        result = "fizz";
         return result;
     }
 
